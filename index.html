@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
 <title>X2list2Y</title>
+<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -17,6 +19,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   height: inherit;
 }
 </style>
+<script src="https://d3js.org/d3.v5.js"></script>
+<script src="js/index.js"></script>
+</head>
 <body>
 
 <!-- Navbar -->
@@ -38,11 +43,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
     <i class="fa fa-remove"></i>
   </a>
-  <h4 class="w3-bar-item"><b>Menu</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+  <h4 class="w3-bar-item"><b>X2list2Y</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Overview</a>
+  <h4 class="w3-bar-item"><b>X2list</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#GSR2list">GSR2list</a>
+  <h4 class="w3-bar-item"><b>list2Y</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#list2GSR">list2GSR</a>
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -52,26 +58,30 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 <div class="w3-main" style="margin-left:250px">
 
   <div class="w3-row w3-padding-64">
-    
+
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">What {X,Y} we already have </h1>
-      <div></div>
-    </div>
-	<div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">What is X2list2Y</h1>
-      <p>This project is all about data conversion. Inspired by Workflowy, We plan to save <b>ALL</b> different-types data in <b>list</b> format. The X, Y represent a specific data type, for example, a GSR file, a html webpage, a SVG, a blog. Also, X could be equal to Y, that means we can convert from X format to list, and revert from list to X format. 
-	 </p> 
-	 <p>This project is about to build infrastructure for data management. 
+      <h1 class="w3-text-teal">X2list2Y</h1>
+      <h2>Overview</h2>
+      <p>This project is about to convert from data type 'X' to list format, then convert to data type 'Y'.</p>
+      <p>where X, Y ∈ {SVG, HTML DOM, an article of blog, slides, ... etc}, our goal is use <b>list</b> to describe as many data type as possible.
+        Also, X could be equal to Y, that means we can convert from X format to list, and revert from list to X format
+      </p>
+      <p>Now we support following data types: </p>
+      <div id = "svg_preview"></div>
+   <p>This project is about to build infrastructure for data management.
 	  </p>
+    <h1 class="w3-text-teal" id="GSR2list">GSR2list</h1>
+    <h1 class="w3-text-teal" id = "list2GSR">list2GSR</h1>
     </div>
 	    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Why we want to do this project </h1>
+
+
       <div></div>
     </div>
   </div>
 
 
-  <!-- Pagination -->
+  <!-- Pagination
   <div class="w3-center w3-padding-32">
     <div class="w3-bar">
       <a class="w3-button w3-black" href="#">1</a>
@@ -82,7 +92,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
       <a class="w3-button w3-hover-black" href="#">»</a>
     </div>
   </div>
-
+-->
   <footer id="myFooter">
     <div class="w3-container w3-theme-l2 w3-padding-32">
       <h4>Footer</h4>
