@@ -47,6 +47,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Overview</a>
   <h4 class="w3-bar-item"><b>X2list</b></h4>
   <a class="w3-bar-item w3-button w3-hover-black" href="#GSR2list">GSR2list</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#XML2list">XML2list</a>
   <h4 class="w3-bar-item"><b>list2Y</b></h4>
   <a class="w3-bar-item w3-button w3-hover-black" href="#list2GSR">list2GSR</a>
 </nav>
@@ -71,6 +72,82 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
    <p>This project is about to build infrastructure for data management.
 	  </p>
     <h1 class="w3-text-teal" id="GSR2list">GSR2list</h1>
+	<h1 class="w3-text-teal" id="XML2list">XML2list</h1>
+	<h2>XML</h2>
+	<textarea cols="50" rows="15">
+<bookstore>
+  <book category="children">
+    <title>Harry Potter</title>
+    <author>J K. Rowling</author>
+    <year>2005</year>
+    <price>29.99</price>
+  </book>
+  <book category="web">
+    <title>Learning XML</title>
+    <author>Erik T. Ray</author>
+    <year>2003</year>
+    <price>39.95</price>
+  </book>
+</bookstore>
+</textarea>
+<h2>list in javascript</h2>
+<textarea cols="50" rows="17">
+{
+	"name": "bookstore",
+	"children":[
+		{
+			"name": "book",			
+			"children":[
+				{
+					"name": "attributes",
+					"children":[
+			
+					]
+				},
+				{
+					"name": "title",
+					"content": "Harry Potter"
+				},
+				{
+					"name": "author",
+					"content": "J K. Rowling"
+				}
+			]
+		},
+		{
+			"name": "book",
+			"children": [
+				{
+			
+				}
+			]
+		}
+	]
+}
+
+
+</textarea>
+<h2>list in python</h2>
+<textarea cols="50" rows="17">
+
+</textarea>
+<h2>list in ASCII format.</h2>
+<textarea cols="50" rows="17">
+@bookstore
+- @book
+  - #category children	
+  - @title	Harry Poter
+  - @author	J K. Rowling
+  - @year	2005
+  - @price	29.99
+- @book
+  - #category web
+  - @title	Learning XML
+  - @author	Eric T.Ray
+  - @year	2003
+  - @price	39.95
+		
+</textarea>
     <h1 class="w3-text-teal" id = "list2GSR">list2GSR</h1>
     </div>
 	    <div class="w3-twothird w3-container">
