@@ -43,13 +43,26 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
     <i class="fa fa-remove"></i>
   </a>
+
+  <h4 class="w3-bar-item"><b>list</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">list format</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">list #ascii</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">list #python</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">list #javascript</a>
   <h4 class="w3-bar-item"><b>X2list2Y</b></h4>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Overview</a>
   <h4 class="w3-bar-item"><b>X2list</b></h4>
   <a class="w3-bar-item w3-button w3-hover-black" href="#GSR2list">GSR2list</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#XML2list">XML2list</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#table2list">table2list</a>
+
   <h4 class="w3-bar-item"><b>list2Y</b></h4>
   <a class="w3-bar-item w3-button w3-hover-black" href="#list2GSR">list2GSR</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#list2XML">list2XML</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#list2table">list2table</a>
+
+  <h4 class="w3-bar-item"><b>@&lt;data type&gt;</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#@table">@table</a>
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -96,12 +109,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 	"name": "bookstore",
 	"children":[
 		{
-			"name": "book",			
+			"name": "book",
 			"children":[
 				{
 					"name": "attributes",
 					"children":[
-			
+
 					]
 				},
 				{
@@ -118,7 +131,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 			"name": "book",
 			"children": [
 				{
-			
+
 				}
 			]
 		}
@@ -135,7 +148,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 <textarea cols="50" rows="17">
 @bookstore
 - @book
-  - #category children	
+  - #category children
   - @title	Harry Poter
   - @author	J K. Rowling
   - @year	2005
@@ -146,15 +159,47 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   - @author	Eric T.Ray
   - @year	2003
   - @price	39.95
-		
+
 </textarea>
+
+
+
     <h1 class="w3-text-teal" id = "list2GSR">list2GSR</h1>
+<h1 class="w3-text-teal" id = "list2table">list2table</h1>
+<p>
+input: @table </p>
+<textarea cols="50" rows="6">
+@table
+  #template xxx
+  @data
+    #header1 header2 header3
+    row11 row12 row13
+    row21 row22 row23
+
+</textarea>
+<p>
+output: table in HTML
+</p>
+<h1>@&lt;data type&gt;</h1>
+the data type in <b>list</b> format.
+<h2 id="@table">@table</h2>
+<textarea name="name" rows="8" cols="50">
+@table
+  ?#<attribute1> xxx ?
+  @data
+    #<header1> <header2> <header3>
+    <data1_1> <data1_2> <data1_3>
+    <data2_1> <data2_2> <data3_3>
+</textarea>
     </div>
-	    <div class="w3-twothird w3-container">
 
 
-      <div></div>
+
     </div>
+      <div class="w3-twothird w3-container">
+
+    </div>
+
   </div>
 
 
