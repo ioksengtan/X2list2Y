@@ -44,13 +44,15 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <i class="fa fa-remove"></i>
   </a>
 
-  <h4 class="w3-bar-item"><b>list</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">list format</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">list #ascii</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">list #python</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">list #javascript</a>
+  
   <h4 class="w3-bar-item"><b>X2list2Y</b></h4>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Overview</a>
+  <h4 class="w3-bar-item"><b>list</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#list_format">list format</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#list_ascii">list #ascii</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#list_diagram">list #diagram</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#list_DS">list #python #javascript</a>  
+  
   <h4 class="w3-bar-item"><b>X2list</b></h4>
   <a class="w3-bar-item w3-button w3-hover-black" href="#GSR2list">GSR2list</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#XML2list">XML2list</a>
@@ -84,6 +86,28 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
       <div id = "svg_preview"></div>
    <p>This project is about to build infrastructure for data management.
 	  </p>
+	<h1 class="w3-text-teal" id="list">list</h1>
+	<h2 id="list_format">list format</h2>
+	<h2 id="list_ascii">list #ascii</h2>
+	<p>list in ASCII format.</p>
+<textarea cols="50" rows="17">
+@bookstore
+- @book
+  - #category children
+  - @title	Harry Poter
+  - @author	J K. Rowling
+  - @year	2005
+  - @price	29.99
+- @book
+  - #category web
+  - @title	Learning XML
+  - @author	Eric T.Ray
+  - @year	2003
+  - @price	39.95
+
+</textarea>
+	<h2 id="list_diagram">list #diagram</h2>
+	<img src="assets/list_diagram.png" alt="list diagram"  style="width:50%">
     <h1 class="w3-text-teal" id="GSR2list">GSR2list</h1>
 	<h1 class="w3-text-teal" id="XML2list">XML2list</h1>
 	<h2>XML</h2>
@@ -103,7 +127,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   </book>
 </bookstore>
 </textarea>
-<h2>list in javascript</h2>
+<h2 id="list_DS">list's data structure in javascript/python</h2>
 <textarea cols="50" rows="17">
 {
 	"name": "bookstore",
@@ -114,7 +138,10 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 				{
 					"name": "attributes",
 					"children":[
-
+						{
+							"name": "category",
+							"content": "children"
+						}
 					]
 				},
 				{
@@ -124,14 +151,44 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 				{
 					"name": "author",
 					"content": "J K. Rowling"
+				},
+				{
+					"name": "year",
+					"content": "2005"
+				},
+				{
+					"name": "price",
+					"content": "29.99"
 				}
 			]
 		},
-		{
+{
 			"name": "book",
-			"children": [
+			"children":[
 				{
-
+					"name": "attributes",
+					"children":[
+						{
+							"name": "category",
+							"content": "web"
+						}
+					]
+				},
+				{
+					"name": "title",
+					"content": "Learning XML"
+				},
+				{
+					"name": "author",
+					"content": "Erik T.Ray"
+				},
+				{
+					"name": "year",
+					"content": "2003"
+				},
+				{
+					"name": "price",
+					"content": "39.95"
 				}
 			]
 		}
@@ -140,10 +197,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
 
 </textarea>
-<h2>list in python</h2>
-<textarea cols="50" rows="17">
 
-</textarea>
 <h2>list in ASCII format.</h2>
 <textarea cols="50" rows="17">
 @bookstore
